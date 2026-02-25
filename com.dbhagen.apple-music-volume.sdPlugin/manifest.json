@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Icon": "imgs/action",
+      "Name": "Apple Music Volume",
+      "States": [
+        {
+          "Image": "imgs/action"
+        }
+      ],
+      "UUID": "com.dbhagen.apple-music-volume.control",
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "layout": "$B1",
+        "TriggerDescription": {
+          "Rotate": "Volume",
+          "Push": "Mute / Unmute",
+          "Touch": "Mute / Unmute"
+        }
+      },
+      "PropertyInspectorPath": "pi/inspector.html",
+      "Tooltip": "Control Apple Music volume with the dial"
+    }
+  ],
+  "Author": "dbhagen",
+  "Category": "Apple Music",
+  "CategoryIcon": "imgs/category",
+  "CodePath": "bin/plugin.js",
+  "Description": "Control Apple Music volume with a Stream Deck+ dial",
+  "Icon": "imgs/plugin",
+  "Name": "Apple Music Volume",
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.7"
+  },
+  "UUID": "com.dbhagen.apple-music-volume",
+  "Version": "1.0.0"
+}
