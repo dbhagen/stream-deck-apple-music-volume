@@ -15,7 +15,7 @@ A Stream Deck+ plugin that controls Apple Music volume using the dial/encoder.
 
 - macOS 13+
 - Stream Deck+ (or any Stream Deck with dial/encoder support)
-- Stream Deck software 6.7+
+- Stream Deck software 6.9+
 - Apple Music app
 
 ## Installation
