@@ -6,7 +6,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "sed -i 's/\"Version\": \".*\"/\"Version\": \"${nextRelease.version}.0\"/' com.dbhagen.apple-music-volume.sdPlugin/manifest.json && npx streamdeck pack com.dbhagen.apple-music-volume.sdPlugin --no-update-check"
+        "prepareCmd": "jq --arg v '${nextRelease.version}.0' '.Version = $v' com.dbhagen.apple-music-volume.sdPlugin/manifest.json > manifest.tmp && mv manifest.tmp com.dbhagen.apple-music-volume.sdPlugin/manifest.json && npx streamdeck pack com.dbhagen.apple-music-volume.sdPlugin --no-update-check"
       }
     ],
     [
