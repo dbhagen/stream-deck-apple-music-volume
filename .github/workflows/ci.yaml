@@ -5,6 +5,23 @@ on:
     branches: [main]
 
 jobs:
+  commitlint:
+    name: Lint commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
+
+      - name: Lint commits
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
   build:
     name: Validate and pack
     runs-on: ubuntu-latest

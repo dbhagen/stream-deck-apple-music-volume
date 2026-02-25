@@ -1,17 +1,10 @@
 {
   "name": "com.dbhagen.apple-music-volume.sdplugin",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "bin": {
-    "com.dbhagen.apple-music-volume.sdplugin": "bin/plugin.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "description": "Stream Deck+ plugin to control Apple Music volume with a dial",
+  "author": "Daniel Hagen",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "ws": "^8.19.0"

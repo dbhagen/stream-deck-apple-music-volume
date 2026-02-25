@@ -1,0 +1,26 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "sed -i 's/\"Version\": \".*\"/\"Version\": \"${nextRelease.version}.0\"/' com.dbhagen.apple-music-volume.sdPlugin/manifest.json && npx streamdeck pack com.dbhagen.apple-music-volume.sdPlugin --no-update-check"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": ["*.streamDeckPlugin"]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["com.dbhagen.apple-music-volume.sdPlugin/manifest.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]"
+      }
+    ]
+  ]
+}

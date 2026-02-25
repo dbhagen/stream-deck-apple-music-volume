@@ -1,17 +1,21 @@
 name: Release
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
 
 jobs:
-  build:
-    name: Pack and publish
+  release:
+    name: Semantic release
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -21,10 +25,10 @@ jobs:
         working-directory: com.dbhagen.apple-music-volume.sdPlugin
         run: npm ci
 
-      - uses: neilenns/streamdeck-cli-pack@v1
-        with:
-          noUpdateCheck: true
+      - name: Install release tooling
+        run: npm install --save-dev semantic-release @semantic-release/exec @semantic-release/git @elgato/cli
 
-      - uses: softprops/action-gh-release@v2
-        with:
-          files: "*.streamDeckPlugin"
+      - name: Run semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
