@@ -24,7 +24,7 @@
     }
   ],
   "Author": "dbhagen",
-  "Category": "Apple Music",
+  "Category": "Apple Music Volume",
   "CategoryIcon": "imgs/category",
   "CodePath": "bin/plugin.js",
   "Description": "Control Apple Music volume with a Stream Deck+ dial",
@@ -45,5 +45,5 @@
     "MinimumVersion": "6.7"
   },
   "UUID": "com.dbhagen.apple-music-volume",
-  "Version": "1.0.0"
+  "Version": "1.0.0.0"
 }

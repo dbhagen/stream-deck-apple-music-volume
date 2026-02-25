@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Pack and publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install plugin dependencies
+        working-directory: com.dbhagen.apple-music-volume.sdPlugin
+        run: npm ci
+
+      - uses: neilenns/streamdeck-cli-pack@v1
+        with:
+          noUpdateCheck: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: "*.streamDeckPlugin"
