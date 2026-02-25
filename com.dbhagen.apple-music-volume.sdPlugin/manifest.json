@@ -10,7 +10,9 @@
         }
       ],
       "UUID": "com.dbhagen.apple-music-volume.control",
-      "Controllers": ["Encoder"],
+      "Controllers": [
+        "Encoder"
+      ],
       "Encoder": {
         "layout": "$B1",
         "TriggerDescription": {
