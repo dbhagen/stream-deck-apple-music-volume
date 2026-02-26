@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg3)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" font-weight="600" fill="#ffffff">Quick Setup</text>
+  <text x="960" y="175" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" fill="#8892b0">Get started in seconds</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(200, 280)">
+    <circle cx="50" cy="50" r="50" fill="#4a9eff"/>
+    <text x="50" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" font-weight="700" fill="#ffffff">1</text>
+    <text x="140" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="36" font-weight="600" fill="#ffffff">Find the action</text>
+    <text x="140" y="85" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" fill="#8892b0">Look for "Apple Music Volume" in the action list</text>
+  </g>
+
+  <!-- Connector -->
+  <line x1="250" y1="400" x2="250" y2="460" stroke="#374151" stroke-width="3" stroke-dasharray="8,8"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(200, 480)">
+    <circle cx="50" cy="50" r="50" fill="#7c3aed"/>
+    <text x="50" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" font-weight="700" fill="#ffffff">2</text>
+    <text x="140" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="36" font-weight="600" fill="#ffffff">Drag to a dial slot</text>
+    <text x="140" y="85" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" fill="#8892b0">Place it on any encoder position on your Stream Deck+</text>
+  </g>
+
+  <!-- Connector -->
+  <line x1="250" y1="600" x2="250" y2="660" stroke="#374151" stroke-width="3" stroke-dasharray="8,8"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(200, 680)">
+    <circle cx="50" cy="50" r="50" fill="#10b981"/>
+    <text x="50" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" font-weight="700" fill="#ffffff">3</text>
+    <text x="140" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="36" font-weight="600" fill="#ffffff">Turn the dial</text>
+    <text x="140" y="85" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" fill="#8892b0">Rotate to adjust volume, press to mute — that's it!</text>
+  </g>
+
+  <!-- Right side: dial interaction diagram -->
+  <g transform="translate(1200, 340)">
+    <!-- Outer dial ring -->
+    <circle cx="250" cy="250" r="200" fill="none" stroke="#374151" stroke-width="6"/>
+    <circle cx="250" cy="250" r="160" fill="#111827" stroke="#2a2a4a" stroke-width="2"/>
+
+    <!-- Rotation arrow (clockwise) -->
+    <path d="M420 140 A200 200 0 0 1 460 250" fill="none" stroke="#4a9eff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M455 235 l5 15 l12-10" fill="none" stroke="#4a9eff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Center text -->
+    <text x="250" y="235" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="700" fill="#ffffff">72%</text>
+    <text x="250" y="290" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" fill="#8892b0">Apple Music</text>
+
+    <!-- Labels -->
+    <text x="500" y="250" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#4a9eff">Rotate</text>
+    <text x="250" y="500" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#7c3aed">Press to Mute</text>
+  </g>
+</svg>
