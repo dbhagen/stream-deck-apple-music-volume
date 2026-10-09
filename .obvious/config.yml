@@ -1,0 +1,40 @@
+branches:
+  defaultBase: main
+pr:
+  merge:
+    method: squash
+reviews:
+  automated:
+    enabled: true
+  routing:
+    rules:
+      - name: Release automation
+        match:
+          - .github/workflows/release.yaml
+        mode: specialized
+        reviewers:
+          - type: security
+      - name: CI quality gates
+        match:
+          - .github/workflows/ci.yaml
+        mode: specialized
+        reviewers:
+          - type: general
+      - name: Plugin source and manifest
+        match:
+          - com.dbhagen.apple-music-volume.sdPlugin/bin/**
+          - com.dbhagen.apple-music-volume.sdPlugin/manifest.json
+        mode: specialized
+        reviewers:
+          - type: general
+      - name: Catch-all
+        match:
+          - '**'
+        mode: single
+qa:
+  guidePaths:
+    - .obvious/QA.md
+  automationPaths:
+    - .github/workflows/ci.yaml
+triageProjects:
+  reviewProjectId: prj_QpqoGc08
