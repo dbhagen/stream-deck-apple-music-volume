@@ -6,6 +6,9 @@
   "author": "Daniel Hagen",
   "license": "MIT",
   "type": "commonjs",
+  "scripts": {
+    "test": "node --test test/plugin.test.js"
+  },
   "dependencies": {
     "ws": "^8.21.0"
   }
