@@ -36,9 +36,11 @@ jobs:
         working-directory: com.dbhagen.apple-music-volume.sdPlugin
         run: npm ci
 
-      - uses: neilenns/streamdeck-cli-pack@v1
-        with:
-          noUpdateCheck: true
+      - name: Validate plugin
+        run: npx --yes @elgato/cli validate com.dbhagen.apple-music-volume.sdPlugin --no-update-check
+
+      - name: Pack plugin
+        run: npx --yes @elgato/cli pack com.dbhagen.apple-music-volume.sdPlugin --no-update-check
 
       - uses: actions/upload-artifact@v4
         with:
