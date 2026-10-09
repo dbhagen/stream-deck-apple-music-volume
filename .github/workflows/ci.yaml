@@ -46,3 +46,21 @@ jobs:
         with:
           name: apple-music-volume-streamdeck-plugin
           path: "*.streamDeckPlugin"
+
+  test:
+    name: Plugin regression tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install plugin dependencies
+        working-directory: com.dbhagen.apple-music-volume.sdPlugin
+        run: npm ci
+
+      - name: Run plugin regression tests
+        working-directory: com.dbhagen.apple-music-volume.sdPlugin
+        run: npm test
